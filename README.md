@@ -18,7 +18,7 @@ Or as a config option:
 
 zuul.yml
 ```
-tunnel-host: http://localtunnel.me
+tunnel_host: http://localtunnel.me
 ```
 
 You can also specify all of this in the `tunnel` config option:
@@ -27,5 +27,5 @@ zuul.yml
 ```
 tunnel:
   type: localtunnel # Optional and unnecessary here
-  tunnel_host: http://localtunnel.me
+  host: http://localtunnel.me
 ```
