@@ -1,6 +1,6 @@
 {
   "name": "zuul-localtunnel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A localtunnel tunnel implementation for Zuul",
   "repository": {
     "type": "git",
