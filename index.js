@@ -17,6 +17,7 @@ Tunnel.prototype.connect = function(port, cb) {
   lt(port, { host: self.host }, function(err, open_tunnel) {
     if (err) {
       cb(err);
+      return;
     }
 
     var url = open_tunnel.url + '/__zuul';
