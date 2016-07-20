@@ -28,4 +28,5 @@ zuul.yml
 tunnel:
   type: localtunnel # Optional and unnecessary here
   host: http://localtunnel.me
+  https: true # False by default, uses https for all connections
 ```
