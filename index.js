@@ -8,6 +8,7 @@ function Tunnel(config) {
   var self = this;
 
   self.host = config.tunnel_host || (config.tunnel && config.tunnel.host) || 'http://localtunnel.me';
+  self.https = config.tunnel && config.tunnel.https;
   self.tunnel = undefined;
 }
 
@@ -19,8 +20,11 @@ Tunnel.prototype.connect = function(port, cb) {
       cb(err);
       return;
     }
-
-    var url = open_tunnel.url + '/__zuul';
+    var tunnelUrl = open_tunnel.url
+    if (self.https) {
+      tunnelUrl = tunnelUrl.replace(/^http:/, 'https:')
+    }
+    var url = tunnelUrl + '/__zuul';
     self.tunnel = open_tunnel;
     cb(null, url);
   });
